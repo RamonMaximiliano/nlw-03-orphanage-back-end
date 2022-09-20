@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;700&family=Open+Sans:wght@600&family=Poppins:wght@400;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(226, 226, 226);
+}
+
+/*SIDE BAR START*/
+.side-bar {
+    position: fixed;
+    display: flex;
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    flex-direction: column;
+    max-width: 50%;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.logo-img {
+    width: 50px;
+}
+
+.side-button {
+    background-color: #1299b4;
+    padding: 12px;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    line-height: 50%;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.side-button:hover {
+    background-color: #06758b;
+}
+
+.back-button {
+    width: 30px;
+}
+
+/*SIDE BAR END*/
+
+
+/*RIGHT AREA DIV START*/
+
+.right-area {
+    background-color: white;
+    width: 550px;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-left: 35%;
+}
+
+.main-title {
+    background-color: rgb(226, 226, 226);
+    color: rgb(141, 141, 141);
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*RIGHT AREA DIV END*/
+
+.second-title {
+    max-width: 450px;
+    color: rgb(83, 83, 83);
+    margin: auto;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+
+.horiz-row {
+    max-width: 450px;
+    color: rgb(83, 83, 83);
+    margin: auto;
+    margin-bottom: 50px;
+
+}
+
+/*MAP DIV START*/
+.map-div {
+    max-width: 450px;
+    margin: auto;
+}
+
+.map-board {
+    max-width: 500px;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px; 
+}
+
+.map-button {
+    max-width: 500px;
+    min-height: 50px;
+    background-color: #cbebf1;
+    color: #156a7a;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px 0px 20px 20px;
+    word-wrap: normal;
+    cursor: pointer;
+    word-wrap: normal;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
+.map-button:hover {
+    background-color: #8cdbe9;
+}
+
+/*MAP DIV END*/
+
+
+/*FORM DADOS START*/
+
+.form-area {
+    max-width: 450px;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    color: rgb(138, 138, 138);
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    margin-bottom:8px;
+}
+
+.main-input {
+    min-height: 50px;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+    border: 1px rgb(158, 158, 158) solid;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(114, 114, 114);
+    padding: 15px;
+    word-wrap: normal;
+}
+
+.input-sobre {
+    min-height: 100px;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+    border: 1px rgb(158, 158, 158) solid;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(114, 114, 114);
+    padding: 15px;
+}
+
+.picture-input {
+    display: none;
+}
+
+.add-photo {
+    min-height: 50px;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+    border: 1px rgb(158, 158, 158) dashed;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(114, 114, 114);
+    padding: 15px;
+    background-image: url("../images/add-file.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.add-photo:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+/*FORM DADOS END*/
+
+
+
+/*FORM VISITAÇÃO START*/
+
+
+
+.yesno {
+    display: flex;
+
+}
+
+.yes-button {
+    width: 50%;
+    min-height: 50px;
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border: 1px rgb(158, 158, 158) solid;
+    color: rgb(94, 94, 94);
+    border-radius: 15px 0 0 15px;
+    transition: background-color 0.1s;
+
+}
+
+.no-button {
+    width: 50%;
+    min-height: 50px;
+    background-color: rgb(243, 243, 243);
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border: 1px rgb(158, 158, 158) solid;
+    color: rgb(94, 94, 94);
+    border-radius: 0px 15px 15px 0px;
+    margin-left: -1px;
+    transition: background-color 0.1s;
+
+}
+
+.no-button:hover, .yes-button:hover {
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 78%;
+    min-height: 50px;
+    margin-top: 30px;
+    background-color: rgb(91, 218, 91);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.submit-button:hover {
+    background-color: rgb(139, 228, 139);
+}
+
+
+
+/*FORM VISITAÇÃO END*/

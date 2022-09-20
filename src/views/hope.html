@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope</title>
+    <link rel="stylesheet" href="./styles/hope.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <aside class="side-bar">
+        <a href="index.html">
+            <img class="logo-img" src="./images/logo-icon.png">
+        </a>
+        <!-- history.back() - método nativo do JS para volta a pagina anterior seja ela qualquer -->
+        <div class="side-button" onclick="history.back()">
+            <img class="back-button" src="./images/arrow-back.svg">
+        </div>
+    </aside>
+
+    <div class="right-div">
+        <h1 class="main-orf-title">Orfanato</h1>
+        <div class="main-picture-div">
+            <img class="main-picture" src="./images/items/house2.JPG">
+        </div>
+        <div class="small-picture-div">
+            <img class="small-picture active" src="./images/items/house2.JPG" alt="Loading" id="img1">
+            <img class="small-picture" src="./images/items/house7.JPG" alt="Loading" id="img2">
+            <img class="small-picture" src="./images/items/house8.JPG" alt="Loading" id="img3">
+            <img class="small-picture" src="./images/items/house5.JPG" alt="Loading" id="img4">
+            <img class="small-picture" src="./images/items/house6.JPG" alt="Loading" id="img5">
+            <img class="small-picture" src="./images/items/house9.JPG" alt="Loading" id="img6">
+
+        </div>
+
+        <h1 class="main-title">Orf. Esperança</h1>
+        <p class="main-text">Presta assistencia a crianças de 06 a 15 anos que se encontram em situação de risco e/ou
+            vulnerabilidade
+            social</p>
+
+        <div class="map-div" id="map">
+        </div>
+        <div class="map-button">Ver rotas no Google Maps</div>
+
+        <hr class="row">
+        <h1 class="sub-title">Instruções para visita</h1>
+        <p class="main-text">Venha como se sentir a vontade e traga muito amor e paciência para dar</p>
+
+        <div class="card-div">
+            <div class="card-bottom">
+                <img src="./images/clock.svg">
+                <p>Horário de visitas<br>
+                    Das 10 até 18h</p>
+            </div>
+            <div class="card-bottom">
+                <img src="./images/info.svg">
+                <p>Atendemos<br>
+                    fim de semana</p>
+            </div>
+        </div>
+
+        <div class="contact-button">
+            <img src="./images/whatsapp.svg">
+            <p>Entrar em contato</p>
+        </div>
+    </div>
+    <script src="./scripts/hope-script.js"></script>
+
+</body>
+
+</html>
+

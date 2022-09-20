@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create orphanage</title>
+    <link rel="stylesheet" href="./styles/create-orphanage.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <aside class="side-bar">
+        <a href="index.html">
+            <img class="logo-img" src="./images/logo-icon.png">
+        </a>
+        <!-- history.back() - método nativo do JS para volta a pagina anterior seja ela qualquer -->
+        <div class="side-button" onclick="history.back()">
+            <img class="back-button" src="./images/arrow-back.svg">
+        </div>
+    </aside>
+
+    <div class="right-area">
+        <div>
+            <h3 class="main-title">Adicione um orfanato</h3>
+        </div>
+        <div class="second-title">
+            <h1>Dados</h1>
+        </div>
+        <hr class="horiz-row" />
+
+        <div class="map-div" >
+            <div class="map-board" id="map"></div>
+            <div class="map-button">Clique no mapa para aidcionar a localização</div>
+        </div>
+
+        <form action="">
+            <div class="form-area">
+                <label for="nome" class="form-title">Nome</label>
+                <input type="text" id="nome" class="main-input" required>
+            </div>
+
+            <div class="form-area">
+                <label for="sobre" class="form-title">Sobre</label>
+                <textarea type="text" id="Sobre" class="input-sobre"></textarea>
+            </div>
+
+            <div class="form-area">
+                <label for="whats" class="form-title">Número de Whatsapp</label>
+                <input type="number" id="whats" class="main-input" required>
+            </div>
+
+            <div class="form-area">
+                <label for="file" class="form-title">Fotos</label>
+                <input type="text" id="file" placeholder="Cole o link da foto aqui" class="main-input">
+                <!-- sumir com o input file e editar o label dele como um button -->
+                <label for="fotos" class="add-photo"></label>
+                <input type="file" id="fotos" class="picture-input">
+            </div>
+            <div class="second-title">
+                <h1>Visitação</h1>
+            </div>
+            <hr class="horiz-row" />
+            <div class="form-area">
+                <label for="Instruções" class="form-title">Instruções</label>
+                <textarea type="text" id="Instruções" class="input-sobre"></textarea>
+            </div>
+            <div class="form-area">
+                <label for="visitas" class="form-title">Horário das visitas</label>
+                <input type="number" id="visitas" class="main-input" required>
+            </div>
+            <div class="form-area">
+                <label for="yesno" class="form-title">Atende fim de semana?</label>
+                <div class="yesno">
+                    <input type="button" id="yes" value="Sim" class="yes-button">
+                    <input type="button" id="no" value="Não" class="no-button">
+                </div>
+            </div>
+            <input type="submit" value="Confirmar" class="submit-button">
+        </form>
+    </div>
+    <script src="./scripts/create-script.js"></script>
+</body>
+</html>
+
+
+<!-- Add pop up with the information provided in the form -->

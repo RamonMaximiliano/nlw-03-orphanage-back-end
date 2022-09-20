@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;700&family=Open+Sans:wght@600&family=Poppins:wght@400;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.aside {
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    max-width: 350px;
+    font-family: 'Nunito', sans-serif;
+    padding: 40px;
+    min-height: 100vh;
+    animation-name: left-appear;
+    animation-duration: 0.2s;
+}
+
+.aside img {
+    max-width: 25%;
+}
+
+.middle-text {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    word-wrap: normal;
+    font-family: 'Nunito', sans-serif;
+}
+
+.middle-small-text {
+    margin-bottom: 80%;
+}
+
+
+.sub-title {
+    font-size: 20px;
+    word-wrap: normal;
+    font-family: 'Nunito', sans-serif;
+}
+
+.plus {
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 18px;
+    width: 60px;
+    height: 60px;
+    background: #29b6d1;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.plus:hover {
+    transition: 0.1s;
+    background: #1b9fb9;
+}
+
+@keyframes left-appear {
+    from {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes map-appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.main {
+    display: flex;
+}
+
+#map {
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    outline: none;
+    background: #ddd;
+    overflow: hidden;
+    animation-delay: 200ms;
+    animation-name: map-appear;
+    animation-duration: 0.5s;
+    z-index: 0;
+}
+
+/* POP UP DO MAPA, CLASSES JÁ SÃO NATIVAS DA API CONFORME A DOC DA API */
+.leaflet-popup-content-wrapper{
+    background:white;
+    border-radius: 20px;
+}
+
+.leaflet-popup-content{
+   color:#29b6d1;
+   font-size: 18px;
+   font-weight: bold;
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.leaflet-popup-content a{
+   width:40px;
+   height: 40px;
+   background-color: #29b6d1;
+   border-radius: 5px;
+   display:flex;
+   transition: background-color 0.1s; 
+}
+.leaflet-popup-content a:hover{
+   background: #0e8aa3;
+}
+
+.leaflet-popup-tip{
+    display:none;
+}
+/* POP UP DO MAPA, CLASSES JÁ SÃO NATIVAS DA API CONFORME A DOC DA API */
+
+
+
+
+/* RESPONSIVITY*/
+/* 
+Só vai contar quando a max width for menor do que o valor informado
+*/
+@media (max-width: 760px){
+    .small-side{
+        width:190px;
+    }
+    .aside img {
+        max-width: 50%;
+    }
+}
+/* RESPONSIVITY*/
+
