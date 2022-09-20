@@ -222,3 +222,7 @@ body {
 .contact-button p {
     margin: 5px;
 }
+
+.whats-button{
+    text-decoration: none;
+}

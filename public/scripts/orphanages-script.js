@@ -39,7 +39,7 @@ var popup = L.popup(
         minWidth:240,
         minHeight:240
     }
-).setContent("Go to orphanage! <a href='hope.html'><img src='./images/arrow-white.svg'></a>")
+).setContent("Go to orphanage! <a href='hope'><img src='./images/arrow-white.svg'></a>")
 
 
 L.marker([-30.0275, -51.2278], {icon:icon}).addTo(map).bindPopup(popup)
