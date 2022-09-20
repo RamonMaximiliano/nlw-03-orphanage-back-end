@@ -1,0 +1,24 @@
+{
+  "name": "nlw-03-orphanage-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamonMaximiliano/nlw-03-orphanage-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamonMaximiliano/nlw-03-orphanage-back-end/issues"
+  },
+  "homepage": "https://github.com/RamonMaximiliano/nlw-03-orphanage-back-end#readme",
+  "devDependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20"
+  }
+}

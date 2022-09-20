@@ -19,8 +19,3 @@ server
 //a porta onde o servidor estará dirigindo os dados (escutando)
 server.listen(5500)
 
-
-
-
-
-/* This is a fucking test */
