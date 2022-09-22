@@ -26,30 +26,53 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const icon = L.icon(
     {
         iconUrl: "./images/map-marker.svg",
-        iconSize:[58,68],
-        iconAnchor:[29,68],
-        popupAnchor:[170,2]
+        iconSize: [58, 68],
+        iconAnchor: [29, 68],
+        popupAnchor: [170, 2]
     }
 )
 
-var popup = L.popup(
-    {
-        closeButton:false,
-        className:"map-popup",
-        minWidth:240,
-        minHeight:240
-    }
-).setContent("Go to orphanage! <a href='hope'><img src='./images/arrow-white.svg'></a>")
 
 
-L.marker([-30.0275, -51.2278], {icon:icon}).addTo(map).bindPopup(popup)
 
-var circle = L.circle([-30.0275, -51.2278], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map)
+//USING FAKE DATA
+
+// 5 - STEP - usando os dados para criar 2 markers e pop ups no mapa
+function addMarker({id,name,lat,lng}) {
+    //create popup
+    var popup = L.popup(
+        {
+            closeButton: false,
+            className: "map-popup",
+            minWidth: 240,
+            minHeight: 240
+        }
+    ).setContent(`${name}! <a href='hope?${id}'><img src='./images/arrow-white.svg'></a>`)
+
+    //create and add marker
+    L.marker([lat,lng], { icon: icon }).addTo(map).bindPopup(popup)
+}
+
+
+// 3 - STEP - Pegando os items span da dom da pagina "orphanages.hbs"
+const orphanagesSpans = document.querySelectorAll(".orphanages span")
+
+// 4 - STEP - jogando os dados deles para a função criada "addMarker"
+for (item of orphanagesSpans){
+    const singleOrphanage = {
+        id: item.dataset.id,
+        name: item.dataset.name,
+        lat: item.dataset.lat,
+        lng: item.dataset.lng
+    } 
+     addMarker(singleOrphanage) 
+}
+
+//USING FAKE DATA
+
+
+
+
 
 
 

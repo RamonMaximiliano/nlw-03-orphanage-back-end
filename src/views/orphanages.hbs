@@ -38,6 +38,17 @@
             class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             tabindex="0"></div>
 
+        {{!-- 2 - STEP - USANDO A FAKEDATA IMPORTADA DO "fakedata.js" PARA CRIAR OS ELEMENTOS SPAN COM OS DADOS DE CADA ITEM DO ARRAY
+        --}}
+        {{#each orphanages}}
+        <div class="orphanages">
+            <span hidden data-id="{{this.id}}" data-name="{{this.name}}" data-lat="{{this.lat}}"
+                data-lng="{{this.lng}}"></span>
+        </div>
+        {{/each}}
+        {{!-- 2 - STEP - USANDO A FAKEDATA IMPORTADA DO "fakedata.js" PARA CRIAR OS ELEMENTOS SPAN COM OS DADOS DE CADA ITEM DO ARRAY
+        --}}
+
         <a href="createOrphanage">
             <div class="plus">
                 <img src="./images/plus.svg">
@@ -47,7 +58,6 @@
     </div>
 
     <script src="./scripts/orphanages-script.js"></script>
-
 </body>
 
 </html>
