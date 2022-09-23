@@ -1,3 +1,6 @@
+const database = require('../../src/database/db')
+
+console.log(database)
 /*
 
 FREE MAPS API: https://leafletjs.com/examples/quick-start/  
